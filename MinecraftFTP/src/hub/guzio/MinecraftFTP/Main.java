@@ -13,11 +13,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin{
     
-    public static Logger L;
+    public static Logger logger;
 
     @Override
     public void onEnable() {
-        L = getLogger();
+        logger = getLogger();
 
         Log("Starting MinecraftFTP transfer server, please wait...");
         //There is no ACTUAL server, it's just a bunch of commands. Sounds cooler like this, though...
@@ -32,6 +32,6 @@ public class Main extends JavaPlugin{
     }
 
     public static void Log(String msg) {
-        L.log(Level.INFO, msg);
+        logger.log(Level.INFO, msg);
     }
 }

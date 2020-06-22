@@ -10,5 +10,14 @@ package hub.guzio.MinecraftFTP.controllers;
 import hub.guzio.MinecraftFTP.abstracts.Controller;
 
 public class LocationController extends Controller{
+
+    protected LocationController() {
+        super("File location");
+    }
+
+    @Override
+    protected Object instance() {
+        return this;
+    }
     
 }

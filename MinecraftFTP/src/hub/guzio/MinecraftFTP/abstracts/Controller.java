@@ -7,4 +7,12 @@ package hub.guzio.MinecraftFTP.abstracts;
 //*UNLESS OTHERWISE NOTED!!!
 //(i.e. if you changed something, don't hesitate to add your name)
 
-public abstract class Controller {}
+import static hub.guzio.MinecraftFTP.Main.Log;
+
+public abstract class Controller {
+    protected Controller(String desc){
+        Log("Loaded \""+desc+"\" controller. Avaible at: "+instance().getClass().getName());
+    }
+
+    protected abstract Object instance();
+}

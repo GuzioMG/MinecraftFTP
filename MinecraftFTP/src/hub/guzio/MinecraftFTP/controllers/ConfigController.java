@@ -20,6 +20,7 @@ public class ConfigController extends Controller{
     private JavaPlugin plugin;
     
     public ConfigController(JavaPlugin plugin){
+        super("Configuration");
         ConfigController_Instance = this;
         this.plugin = plugin;
         config = plugin.getConfig();
@@ -34,5 +35,10 @@ public class ConfigController extends Controller{
     public static void setCf(Object object, String path) {
         ConfigController_Instance.config.set(path, object);
         ConfigController_Instance.plugin.saveConfig();
+    }
+
+    @Override
+    public Object instance(){
+        return this;
     }
 }
