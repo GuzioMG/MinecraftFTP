@@ -52,7 +52,7 @@
                 <relocations>
                     <relocation>
                         <pattern>io.papermc.lib</pattern>
-                        <shadedPattern>[YOUR PLUGIN PACKAGE].paperlib</shadedPattern> <!-- Replace this -->
+                        <shadedPattern>hub.guzio.MinecraftFTP.paperlib</shadedPattern>
                     </relocation>
                 </relocations>
             </configuration>
