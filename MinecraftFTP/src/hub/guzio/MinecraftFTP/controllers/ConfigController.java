@@ -1,6 +1,5 @@
 package hub.guzio.MinecraftFTP.controllers;
 
-
 //Config controller for MinecraftFTP. It's ment to be imported statically to give the user direct acces to it's content.
 
 //Copyright (C) Guzio 2020. All rights reserved.
@@ -35,10 +34,5 @@ public class ConfigController extends Controller{
     public static void setCf(Object object, String path) {
         ConfigController_Instance.config.set(path, object);
         ConfigController_Instance.plugin.saveConfig();
-    }
-
-    @Override
-    public Object instance(){
-        return this;
     }
 }

@@ -15,9 +15,4 @@ public class LocationController extends Controller{
         super("File location");
     }
 
-    @Override
-    protected Object instance() {
-        return this;
-    }
-    
 }
