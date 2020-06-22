@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  <!-- Pre-config -->
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>hub.guzio.MinecraftFTP</groupId>
+  <artifactId>MinecraftFTP</artifactId>
+  <version>v0.0.0.0000D1_0.0.0D@1-1</version>
+  <packaging>jar</packaging>
+
+  <!-- RealConfig -->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.14</maven.compiler.source>
+    <maven.compiler.target>1.14</maven.compiler.target>
+  </properties>
+
+  <!-- OtherRepos -->
+  <repositories>
+    <repository>
+        <id>papermc</id>
+        <url>https://papermc.io/repo/repository/maven-public/</url>
+    </repository>
+  </repositories>
+
+  <!--Dependencies-->
+  <dependencies>
+    <dependency>
+        <groupId>io.papermc</groupId>
+        <artifactId>paperlib</artifactId>
+        <version>1.0.3</version>
+        <scope>compile</scope>
+     </dependency>
+     <dependency>
+        <groupId>com.destroystokyo.paper</groupId>
+        <artifactId>paper-api</artifactId>
+        <version>1.15.2-R0.1-SNAPSHOT</version>
+        <scope>provided</scope>
+     </dependency>
+  </dependencies>
+
+  <!-- End-config -->
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>3.1.1</version>
+            <configuration>
+                <dependencyReducedPomLocation>${project.build.directory}/dependency-reduced-pom.xml</dependencyReducedPomLocation>
+                <relocations>
+                    <relocation>
+                        <pattern>io.papermc.lib</pattern>
+                        <shadedPattern>[YOUR PLUGIN PACKAGE].paperlib</shadedPattern> <!-- Replace this -->
+                    </relocation>
+                </relocations>
+            </configuration>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>shade</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>build-helper-maven-plugin</artifactId>
+          <version>3.0.0</version>
+          <executions>
+              <execution>
+                  <phase>generate-sources</phase>
+                  <goals>
+                      <goal>add-source</goal>
+                  </goals>
+                  <configuration>
+                      <sources>
+                          <source>res</source>
+                      </sources>
+                  </configuration>
+              </execution>
+          </executions>
+      </plugin>
+    </plugins>
+    <sourceDirectory>${project.basedir}/src</sourceDirectory>
+    <directory>${project.basedir}/bin</directory>
+    <testOutputDirectory>${project.basedir}/bin/tests</testOutputDirectory>
+    <resources>
+      <resource>
+        <directory>${project.basedir}/res</directory>
+        <includes>
+          <include>plugin.yml</include>
+        </includes>
+      </resource>
+    </resources>
+    <outputDirectory>${project.basedir}/bin/main</outputDirectory>
+  </build>
+
+</project>
