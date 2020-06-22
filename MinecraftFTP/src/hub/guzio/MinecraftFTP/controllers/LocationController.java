@@ -8,6 +8,7 @@ package hub.guzio.MinecraftFTP.controllers;
 //(i.e. if you changed something, don't hesitate to add your name)
 
 import hub.guzio.MinecraftFTP.abstracts.Controller;
+import static hub.guzio.MinecraftFTP.controllers.ConfigController.*;
 
 public class LocationController extends Controller{
 
