@@ -11,24 +11,30 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import hub.guzio.MinecraftFTP.commands.PWD;
+import hub.guzio.MinecraftFTP.controllers.LocationController;
+
 public class Main extends JavaPlugin{
     
     public static Logger logger;
 
     @Override
-    public void onEnable() {
-        logger = getLogger();
+    public void onEnable() {logger = getLogger();
 
-        Log("Starting MinecraftFTP transfer server, please wait...");
+        Log("Starting MinecraftFTP v0.0.0.0000D1_0.0.0D@1-1 transfer server, please wait...");
         //There is no ACTUAL server, it's just a bunch of commands. Sounds cooler like this, though...
 
-        Log("[1/2] Registring commands...");
-        //CMDs
-
-        Log("[2/2] Processing SUPER...");
+        Log("[1/3] Processing SUPER...");
         super.onEnable();
 
+        Log("[2/3] Loading controllers...");
+        new LocationController(this);
+
+        Log("[3/3] Registring commands...");
+        this.getCommand("pwd").setExecutor(new PWD());
+
         Log("MinecraftFTP - READY!!!");
+
     }
 
     public static void Log(String msg) {

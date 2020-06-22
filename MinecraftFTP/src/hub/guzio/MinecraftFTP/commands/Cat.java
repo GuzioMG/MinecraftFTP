@@ -8,5 +8,7 @@ package hub.guzio.MinecraftFTP.commands;
 //(i.e. if you changed something, don't hesitate to add your name)
 
 public class Cat {
+    public static void Meow(){} //OK, I just HAD to do this...
+
     
 }
