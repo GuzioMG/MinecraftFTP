@@ -47,7 +47,7 @@ public class LocationController extends Controller{
     }
 
     public static void updatePath(String change, @Nullable Player player) {
-        Path path = simplifyPaths(where_is(player), Path.of(change));
+        Path path = where_is(player).resolve(Path.of(change)).normalize();
         setCf(path.toString(), buildPath(getPID(player)));
     }
 
