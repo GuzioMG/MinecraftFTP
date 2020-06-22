@@ -50,11 +50,11 @@ public class CD extends CommandAbs{
         File fullpath = where_ACTUALLY_is(player).resolve(newPathstring).toFile();
 
         //Check for existance
-        if(!(fullpath.exists())){
+        if(!(fullpath.exists()) || newPathstring == "%home%" || newPathstring == "%up%" ){
             sender.sendMessage(ChatColor.RED+"Directory does not exist!");
             return true;
         }
-        if(where_ACTUALLY_is(player).toFile().isFile()){
+        if(fullpath.isFile()){
             sender.sendMessage(ChatColor.RED+"Directory is a file!");
             return false;
         }

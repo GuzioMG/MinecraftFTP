@@ -48,7 +48,7 @@ public class LocationController extends Controller{
 
     public static void updatePath(String change, @Nullable Player player) {
         Path path = simplifyPaths(where_is(player), Path.of(change));
-        setCf(path.toString(), buildPath(player.getUniqueId().toString()));
+        setCf(path.toString(), buildPath(getPID(player)));
     }
 
     public static String buildPath(String playerID) {
@@ -69,7 +69,7 @@ public class LocationController extends Controller{
             return "consoleBasedTypeOfMinecraftUser";
         }
         else{
-            String output =  player.getUniqueId().toString().replaceAll("-", "dashCharacter").replaceAll("_", "bottomlineCharacter");
+            String output =  player.getUniqueId().toString().replaceAll("-", "dashCharacter").replaceAll("_", "bottomlineCharacter").replaceAll(" ", "").replaceAll("?", "");
             if(output.startsWith("0") || output.startsWith ("1") || output.startsWith ("2") || output.startsWith ("3") || output.startsWith ("4") || output.startsWith ("5") || output.startsWith ("6") || output.startsWith ("7") || output.startsWith ("8") || output.startsWith ("9")){
                 output = "numberBasedStartTypeOfMinecraftUUID"+output;
             }
