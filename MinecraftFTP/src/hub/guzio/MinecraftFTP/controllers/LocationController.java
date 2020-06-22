@@ -69,7 +69,7 @@ public class LocationController extends Controller{
             return "consoleBasedTypeOfMinecraftUser";
         }
         else{
-            String output =  player.getUniqueId().toString().replaceAll("-", "dashCharacter").replaceAll("_", "bottomlineCharacter").replaceAll(" ", "").replaceAll("?", "");
+            String output =  player.getUniqueId().toString().replaceAll("-", "dashCharacter").replaceAll("_", "bottomlineCharacter").replaceAll(" ", "").replace("?", "");
             if(output.startsWith("0") || output.startsWith ("1") || output.startsWith ("2") || output.startsWith ("3") || output.startsWith ("4") || output.startsWith ("5") || output.startsWith ("6") || output.startsWith ("7") || output.startsWith ("8") || output.startsWith ("9")){
                 output = "numberBasedStartTypeOfMinecraftUUID"+output;
             }
