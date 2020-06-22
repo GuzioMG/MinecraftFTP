@@ -20,7 +20,7 @@ import hub.guzio.MinecraftFTP.abstracts.CommandAbs;
 public class CD extends CommandAbs{
 
     public CD() {
-        super("pwd", "mcftp.filesystem");
+        super("cd", "mcftp.filesystem");
     }
     
     @Override
