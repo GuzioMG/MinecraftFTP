@@ -9,6 +9,8 @@ package hub.guzio.MinecraftFTP.commands;
 
 import hub.guzio.MinecraftFTP.abstracts.CommandAbs;
 import javax.annotation.Nullable;
+
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -22,13 +24,25 @@ public class PWD extends CommandAbs {
     
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        
+        //Break/exit, if sender don't have perms
         if(super.onCommand(sender, command, label, args)){return true;}
         
+        //Create player
         @Nullable
         Player player = null;
         if(sender instanceof Player) player = (Player)sender;
-        sender.sendMessage("You're currently at: "+where_is(player)  +"\n"+
-        "(which directly translates to \""+ where_ACTUALLY_is(player) +"\").");
+
+        //Setup varibles
+        String Loc = ""+ChatColor.YELLOW+where_is(player);
+        String rLoc= ""+ChatColor.AQUA+where_ACTUALLY_is(player)+ChatColor.RESET;
+
+        //Broadcast location
+        sender.sendMessage("You're currently at "+ChatColor.GRAY+"(relative to plugin config)"+ChatColor.RESET+": "+Loc
+        +"\n\n"+
+        "(Which directly translates to \""+rLoc+"\".)");
+        
+        //Exit
         return true;
     }
 }

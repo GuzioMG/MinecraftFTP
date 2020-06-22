@@ -61,7 +61,7 @@ public class LocationController extends Controller{
 
     public static Path simplifyPaths(Path home, Path merge){
         Path output = home.resolve(merge);
-        return output.toAbsolutePath();
+        return output.toAbsolutePath().normalize();
     }
 
     public static String getPID(@Nullable Player player){
