@@ -7,4 +7,4 @@ package hub.guzio.MinecraftFTP.controllers;
 //*UNLESS OTHERWISE NOTED!!!
 //(i.e. if you changed something, don't hesitate to add your name)
 
-final class pkInf6 {}
+final class pkInf {}

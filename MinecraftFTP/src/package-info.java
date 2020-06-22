@@ -5,4 +5,4 @@
 //*UNLESS OTHERWISE NOTED!!!
 //(i.e. if you changed something, don't hesitate to add your name)
 
-final class pkInf1 {}
+final class pkInf {}
