@@ -39,7 +39,7 @@ public class PWD extends CommandAbs {
 
         //Broadcast location
         sender.sendMessage("You're currently at "+ChatColor.GRAY+"(relative to plugin config)"+ChatColor.RESET+": "+Loc
-        +"\n\n"+
+        +ChatColor.RESET+"\n\n\n"+
         "(Which directly translates to \""+rLoc+"\".)");
         
         //Exit

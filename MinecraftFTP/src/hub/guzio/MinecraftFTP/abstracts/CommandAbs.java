@@ -21,7 +21,7 @@ public abstract class CommandAbs implements CommandExecutor{
     protected CommandAbs(String commandText, String perm){
         CommandText = commandText;
         this.perm = perm;
-        Log("Registred /"+CommandText+" command.");
+        Log("[LOADER/EXECUTION/COMMAND_REGISTRY] Registred /"+CommandText+" command.");
     }
 
     @Override

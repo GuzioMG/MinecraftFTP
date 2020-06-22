@@ -12,3 +12,6 @@ commands:
   pwd:
     usage: /pwd
     description: Shows your location.
+  cd:
+    usage: /cd <location> OR /cd %home% OR /cd %up%
+    description: Navigates you to a particular folder. When used with %home%, changes your location to home (plugin's config directory) and /cd %up% is equal to /cd ..

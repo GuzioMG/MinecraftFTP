@@ -11,6 +11,6 @@ import static hub.guzio.MinecraftFTP.Main.Log;
 
 public abstract class Controller extends Abstract{
     protected Controller(String desc){
-        Log("Loaded \""+desc+"\" controller.");
+        Log("[LOADER/EXECUTION/CONTROLLERS_LOADER] Loaded \""+desc+"\" controller.");
     }
 }
