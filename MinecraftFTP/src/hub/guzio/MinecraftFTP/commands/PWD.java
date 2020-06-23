@@ -48,8 +48,4 @@ public class PWD extends CommandAbs {
         //Exit
         return true;
     }
-
-    public static void broadcast_location(CommandSender sender) {
-        
-    }
 }
