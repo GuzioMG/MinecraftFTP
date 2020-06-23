@@ -69,7 +69,7 @@ public class LocationController extends Controller{
             return "consoleBasedTypeOfMinecraftUser";
         }
         else{
-            return player.getName();
+            return player.getName(); //It turned out, that PIDs don't work very well and I had to change that back to PlayerName. Anyway, the name PID still exist, because I'm too lazy to update everything.
         }
     }
 }
