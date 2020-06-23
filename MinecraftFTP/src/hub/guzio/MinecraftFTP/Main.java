@@ -33,7 +33,7 @@ public class Main extends JavaPlugin{
         this.getCommand("pwd").setExecutor(new PWD());
         this.getCommand("cd") .setExecutor(new CD() );
 
-        Log("MinecraftFTP - READY!!!");
+        Log("[LOADER] MinecraftFTP - READY!!!");
 
     }
 
