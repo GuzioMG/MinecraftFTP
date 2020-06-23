@@ -42,17 +42,19 @@ public class CD extends CommandAbs{
 
         //Parse args
         String newPathstring = args[0];
+        if(newPathstring.equalsIgnoreCase("..") || newPathstring.equalsIgnoreCase(".")) return false;
+        sender.sendMessage("Navigating to: "+ChatColor.AQUA+newPathstring);
         if(newPathstring.equalsIgnoreCase("%up%")) newPathstring = "..";
         else if(newPathstring.equalsIgnoreCase("%home%")){
-            setCf(".", buildPath(getPID(player)));
-            return true;
-        }
-        File fullpath = where_ACTUALLY_is(player).resolve(newPathstring).toFile();
 
-        //DEBUG
-        sender.sendMessage("DEBUG: Navigating to: "+newPathstring);
+        //Send sender back home, if needed
+        setCf(".", buildPath(getPID(player)));
+        sender.sendMessage(ChatColor.DARK_PURPLE+"You're back home! Enjoy :-)");
+        return true;
+        }
         
         //Check for existance
+        File fullpath = where_ACTUALLY_is(player).resolve(newPathstring).toFile();
         if(!(fullpath.exists())){
             sender.sendMessage(ChatColor.RED+"Directory does not exist!");
             return true;
@@ -64,6 +66,8 @@ public class CD extends CommandAbs{
 
         //Navigate
         updatePath(newPathstring, player);
+        sender.sendMessage(ChatColor.GREEN+"Navigation succesful!\n\n");
+        new PWD(false).onCommand(sender, command, label, args);
         
         //Exit
         return true;

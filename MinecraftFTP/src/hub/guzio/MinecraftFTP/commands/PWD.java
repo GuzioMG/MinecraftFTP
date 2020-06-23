@@ -18,15 +18,18 @@ import static hub.guzio.MinecraftFTP.controllers.LocationController.*;
 
 public class PWD extends CommandAbs {
 
-    public PWD() {
+    private boolean shouldCheck;
+
+    public PWD(boolean shouldCheck) {
         super("pwd", "mcftp.filesystem");
+        this.shouldCheck = shouldCheck;
     }
     
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         
         //Break/exit, if sender don't have perms
-        if(super.onCommand(sender, command, label, args)){return true;}
+        if(super.onCommand(sender, command, label, args)&&shouldCheck){return true;}
         
         //Create player
         @Nullable
@@ -44,5 +47,9 @@ public class PWD extends CommandAbs {
         
         //Exit
         return true;
+    }
+
+    public static void broadcast_location(CommandSender sender) {
+        
     }
 }

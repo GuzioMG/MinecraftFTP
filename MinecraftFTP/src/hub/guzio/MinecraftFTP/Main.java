@@ -16,11 +16,12 @@ import hub.guzio.MinecraftFTP.controllers.LocationController;
 public class Main extends JavaPlugin{
     
     public static Logger logger;
+    public static PWD pwCommand;
 
     @Override
     public void onEnable() {logger = getLogger();
 
-        Log("[LOADER] Starting MinecraftFTP v0.0.0.0000D1_0.0.0D@17-17 transfer server, please wait...");
+        Log("[LOADER] Starting MinecraftFTP v0.0.0.0000D1_0.0.0D@18-18 transfer server, please wait...");
         //There is no ACTUAL server, it's just a bunch of commands. Sounds cooler like this, though...
 
         Log("[LOADER/EXECUTION] [1/3] Processing SUPER...");
@@ -30,7 +31,7 @@ public class Main extends JavaPlugin{
         new LocationController(this);
 
         Log("[LOADER/EXECUTION] [3/3] Registring commands...");
-        this.getCommand("pwd").setExecutor(new PWD());
+        this.getCommand("pwd").setExecutor(new PWD(true));
         this.getCommand("cd") .setExecutor(new CD() );
 
         Log("[LOADER] MinecraftFTP - READY!!!");

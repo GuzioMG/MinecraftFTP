@@ -1,6 +1,6 @@
 main: hub.guzio.MinecraftFTP.Main
 name: MinecraftFTP
-version: v0.0.0.0000D1_0.0.0D@17-17
+version: v0.0.0.0000D1_0.0.0D@18-18
 load: STARTUP
 author: Guzio
 authors:
@@ -13,5 +13,5 @@ commands:
     usage: /pwd
     description: Shows your location.
   cd:
-    usage: /cd <location> OR /cd %home% OR /cd %up%
+    usage: /cd <directory> OR /cd %home% OR /cd %up% BUT NOT /cd .. OR /cd .
     description: Navigates you to a particular folder. When used with %home%, changes your location to home (plugin's config directory) and /cd %up% is equal to /cd ..
