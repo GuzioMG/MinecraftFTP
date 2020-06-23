@@ -66,7 +66,7 @@ public class CD extends CommandAbs{
 
         //Navigate
         updatePath(newPathstring, player);
-        sender.sendMessage(ChatColor.GREEN+"Navigation succesful!\n\n");
+        sender.sendMessage(ChatColor.GREEN+"Navigation succesful!\n   \n   ");
         new PWD(false).onCommand(sender, command, label, args);
         
         //Exit

@@ -6,14 +6,14 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>hub.guzio.MinecraftFTP</groupId>
   <artifactId>MinecraftFTP</artifactId>
-  <version>v0.0.0.0000D1_0.0.0D@1-1</version>
+  <version>v0.0.0.0000D1_1.0.0A@20-0</version>
   <packaging>jar</packaging>
 
   <!-- RealConfig -->
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.15</maven.compiler.source>
-    <maven.compiler.target>1.14</maven.compiler.target>
+    <maven.compiler.source>1.14</maven.compiler.source>
+    <maven.compiler.target>15-ea</maven.compiler.target>
   </properties>
 
   <!-- OtherRepos -->
@@ -42,6 +42,7 @@
 
   <!-- End-config -->
   <build>
+    <finalName>MinecraftFTP</finalName>
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>

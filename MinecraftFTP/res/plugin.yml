@@ -1,6 +1,6 @@
 main: hub.guzio.MinecraftFTP.Main
 name: MinecraftFTP
-version: v0.0.0.0000D1_0.0.0D@18-18
+version: v0.0.0.0000D1_1.0.0A@20-0
 load: STARTUP
 author: Guzio
 authors:
@@ -8,6 +8,10 @@ authors:
 website: https://github.com/GuzioMG/MinecraftFTP
 description: A file manager accessed from in-game. Useful in Minecraft server managment.
 prefix: mcftp
+permissions:
+  mcftp.filesystem:
+    default: false
+    description: Main (and the only one) permission in MinecraftFTP. Grants full filesystem acces.
 commands:
   pwd:
     usage: /pwd
@@ -15,3 +19,6 @@ commands:
   cd:
     usage: /cd <directory> OR /cd %home% OR /cd %up% BUT NOT /cd .. OR /cd .
     description: Navigates you to a particular folder. When used with %home%, changes your location to home (plugin's config directory) and /cd %up% is equal to /cd ..
+  ls:
+    usage: /ls
+    description: Lists files and directories.

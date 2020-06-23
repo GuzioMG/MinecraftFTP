@@ -11,9 +11,7 @@ import hub.guzio.MinecraftFTP.abstracts.Controller;
 import static hub.guzio.MinecraftFTP.controllers.ConfigController.*;
 import java.nio.file.Path;
 import java.util.List;
-
 import javax.annotation.Nullable;
-
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -32,6 +30,10 @@ public class LocationController extends Controller{
         String playerID = getPID(player);
 
         if(players.contains(playerID)){
+            Path output = Path.of(getCf().getString(buildPath(playerID)));
+            if(output.equals(Path.of("."))){
+                setCf(".", buildPath(playerID));
+            }
             return Path.of(getCf().getString(buildPath(playerID)));
         }
         else{
@@ -69,7 +71,7 @@ public class LocationController extends Controller{
             return "consoleBasedTypeOfMinecraftUser";
         }
         else{
-            return player.getName(); //It turned out, that PIDs don't work very well and I had to change that back to PlayerName. Anyway, the name PID still exist, because I'm too lazy to update everything.
+            return player.getName(); //It turned out, that PIDs don't work very well and I had to change that back to PlayerName. Anyway, the name PID still exist, because I'm too lazy to update everything. YES, I KNOW about the refractor, I'm not an idiot. But just look at line 55 or 32 or any other similar one, please. Thank you :-) Now, forget about the refractor.
         }
     }
 }
