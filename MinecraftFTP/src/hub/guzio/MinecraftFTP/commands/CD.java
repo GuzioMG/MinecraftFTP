@@ -53,7 +53,7 @@ public class CD extends CommandAbs{
         sender.sendMessage("DEBUG: Navigating to: "+newPathstring);
         
         //Check for existance
-        if((!(fullpath.exists())) || newPathstring == "%home%" || newPathstring == "%up%" ){
+        if(!(fullpath.exists()) || !(newPathstring == "%home%") || !(newPathstring == "%up%") ){
             sender.sendMessage(ChatColor.RED+"Directory does not exist!");
             return true;
         }
