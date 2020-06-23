@@ -1,6 +1,6 @@
 package hub.guzio.MinecraftFTP.abstracts;
 
-//Controller abstract for MinecraftFTP.
+//Controller abstract for MinecraftFTP. Controllers are ment to be imported statically to help with different stuff.
 
 //Copyright (C) Guzio 2020. All rights reserved.
 //License still apply, though, I just wanted to type "All rights reserved".
