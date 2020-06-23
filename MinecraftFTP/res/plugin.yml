@@ -1,6 +1,6 @@
 main: hub.guzio.MinecraftFTP.Main
 name: MinecraftFTP
-version: v0.0.0.0000D1_0.0.0D@1-1
+version: v0.0.0.0000D1_0.0.0D@17-17
 load: STARTUP
 author: Guzio
 authors:

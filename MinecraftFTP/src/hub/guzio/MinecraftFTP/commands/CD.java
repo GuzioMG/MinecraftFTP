@@ -42,8 +42,8 @@ public class CD extends CommandAbs{
 
         //Parse args
         String newPathstring = args[0];
-        if(newPathstring == "%up%") newPathstring = "..";
-        else if(newPathstring == "%home%"){
+        if(newPathstring.equalsIgnoreCase("%up%")) newPathstring = "..";
+        else if(newPathstring.equalsIgnoreCase("%home%")){
             setCf(".", buildPath(getPID(player)));
             return true;
         }
@@ -53,7 +53,7 @@ public class CD extends CommandAbs{
         sender.sendMessage("DEBUG: Navigating to: "+newPathstring);
         
         //Check for existance
-        if(!(fullpath.exists()) || !(newPathstring == "%home%") || !(newPathstring == "%up%") ){
+        if(!(fullpath.exists())){
             sender.sendMessage(ChatColor.RED+"Directory does not exist!");
             return true;
         }

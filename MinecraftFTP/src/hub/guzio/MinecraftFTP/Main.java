@@ -20,7 +20,7 @@ public class Main extends JavaPlugin{
     @Override
     public void onEnable() {logger = getLogger();
 
-        Log("[LOADER] Starting MinecraftFTP v0.0.0.0000D1_0.0.0D@1-1 transfer server, please wait...");
+        Log("[LOADER] Starting MinecraftFTP v0.0.0.0000D1_0.0.0D@17-17 transfer server, please wait...");
         //There is no ACTUAL server, it's just a bunch of commands. Sounds cooler like this, though...
 
         Log("[LOADER/EXECUTION] [1/3] Processing SUPER...");
