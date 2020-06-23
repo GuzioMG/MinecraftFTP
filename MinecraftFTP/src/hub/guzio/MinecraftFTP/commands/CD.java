@@ -49,6 +49,9 @@ public class CD extends CommandAbs{
         }
         File fullpath = where_ACTUALLY_is(player).resolve(newPathstring).toFile();
 
+        //DEBUG
+        sender.sendMessage("DEBUG: Navigating to: "+newPathstring);
+        
         //Check for existance
         if((!(fullpath.exists())) || newPathstring == "%home%" || newPathstring == "%up%" ){
             sender.sendMessage(ChatColor.RED+"Directory does not exist!");
