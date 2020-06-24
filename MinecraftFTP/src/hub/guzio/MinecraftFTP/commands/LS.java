@@ -21,7 +21,7 @@ import org.bukkit.entity.Player;
 public class LS extends CommandAbs{
     
     public LS() {
-        super("pwd", "mcftp.filesystem");
+        super("ls", "mcftp.filesystem");
     }
 
     @Override
