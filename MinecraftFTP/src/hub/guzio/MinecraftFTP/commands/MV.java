@@ -9,14 +9,11 @@ package hub.guzio.MinecraftFTP.commands;
 
 import hub.guzio.MinecraftFTP.abstracts.CommandAbs;
 import javax.annotation.Nullable;
-import javax.sound.midi.Patch; //Where did THAT came from??
-
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import static hub.guzio.MinecraftFTP.controllers.LocationController.*;
-
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -99,6 +96,8 @@ public class MV extends CommandAbs {
     }
 
     public static boolean remove(Player player, Path toRm) throws Exception{
+        
+        //BIG shoutout to Robert Piasecki for making https://softwarecave.org/2018/03/24/delete-directory-with-contents-in-java/ Without it, I propably couldn't make it (like... I propably could; it's just a simple loop, but I'm far too lazy). I highly recomend checking him out (hey, he's form Poland too, just like me, and he's also a Linux, Java and OpenSource fan - like me, too).
         File file = toRm.toFile();
 
         if (file.isDirectory()) {

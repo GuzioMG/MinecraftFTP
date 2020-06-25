@@ -10,7 +10,6 @@ package hub.guzio.MinecraftFTP.commands;
 import static hub.guzio.MinecraftFTP.controllers.LocationController.*;
 import java.io.File;
 import java.util.Scanner;
-
 import javax.annotation.Nullable;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
