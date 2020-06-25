@@ -8,5 +8,6 @@ package hub.guzio.MinecraftFTP.commands;
 //(i.e. if you changed something, don't hesitate to add your name)
 
 public class Wget {
-    
+    //I'm afraid!!! Like... terrafied!
+    //I AM SCARED of networking! Pls, don't make me do this!
 }
