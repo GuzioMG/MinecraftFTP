@@ -1,5 +1,6 @@
 /home/guzio/Programy/MinecraftFTP/MinecraftFTP/src/hub/guzio/MinecraftFTP/abstracts/CommandAbs.java
 /home/guzio/Programy/MinecraftFTP/MinecraftFTP/src/hub/guzio/MinecraftFTP/abstracts/Controller.java
+/home/guzio/Programy/MinecraftFTP/MinecraftFTP/src/hub/guzio/MinecraftFTP/commands/Copy.java
 /home/guzio/Programy/MinecraftFTP/MinecraftFTP/src/hub/guzio/MinecraftFTP/commands/Cat.java
 /home/guzio/Programy/MinecraftFTP/MinecraftFTP/src/hub/guzio/MinecraftFTP/package-info.java
 /home/guzio/Programy/MinecraftFTP/MinecraftFTP/src/hub/guzio/MinecraftFTP/abstracts/package-info.java

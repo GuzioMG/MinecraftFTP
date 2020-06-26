@@ -20,7 +20,7 @@ public class Main extends JavaPlugin{
     @Override
     public void onEnable() {logger = getLogger();
 
-        Log("[LOADER] Starting MinecraftFTP v0.0.0.0000D1_1.0.0A@20-0 transfer server, please wait...");
+        Log("[LOADER] Starting MinecraftFTP v1.0.0.0000B1@21-0 transfer server, please wait...");
         //There is no ACTUAL server, it's just a bunch of commands. Sounds cooler like this (instead of usual "loading"), though...
 
         Log("[LOADER/EXECUTION] [1/3] Processing SUPER...");
@@ -30,9 +30,13 @@ public class Main extends JavaPlugin{
         new LocationController(this);
 
         Log("[LOADER/EXECUTION] [3/3] Registring commands...");
-        this.getCommand("pwd").setExecutor(new PWD(true));
-        this.getCommand("cd") .setExecutor(new CD()     );
-        this.getCommand("ls") .setExecutor(new LS()     );
+        this.getCommand("pwd" ).setExecutor(new PWD(true));
+        this.getCommand("cd"  ).setExecutor(new CD(     ));
+        this.getCommand("ls"  ).setExecutor(new LS(     ));
+        this.getCommand("cat" ).setExecutor(new Cat(    ));
+        this.getCommand("cp"  ).setExecutor(new Copy(   ));
+        this.getCommand("mv"  ).setExecutor(new MV(     ));
+        this.getCommand("wget").setExecutor(new Wget(   ));
 
         Log("[LOADER] MinecraftFTP - READY!!!");
 

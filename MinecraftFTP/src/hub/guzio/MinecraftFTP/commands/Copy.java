@@ -1,6 +1,6 @@
 package hub.guzio.MinecraftFTP.commands;
 
-//Move command. Usage: /mv <filename> <newFilename> OR /mv <filename> <newLocation> OR /mv <filename> %newdir%
+//Move command. Usage: /cp <filename> <newFilename> OR /cp <filename> <dirname> OR /cp <dirname> %newdir%
 
 //Copyright (C) Guzio 2020. All rights reserved.
 //License still apply, though, I just wanted to type "All rights reserved".
@@ -20,7 +20,7 @@ import java.nio.file.Path;
 public class Copy extends CommandAbs {
 
     public Copy() {
-        super("mv", "mcftp.filesystem");
+        super("cp", "mcftp.filesystem");
     }
 
     @Override
@@ -53,7 +53,7 @@ public class Copy extends CommandAbs {
     }
 
     //WELL..... OK, BEYOND THIS POINT... I HAVE NO CLUE, WHAT'S GOING ON. I'VE BEEN LITERALLY FALLING ASLEEP ON MY DESK (bad netflix), WHILE CODING THIS AND I NOW HAVE NO IDEA, WHAT'S GOING ON. LET'S JUST HOPE, IT WORKS!
-    //Ok, I technically DO know, what's going on - I simply copied MV.java and slightly changed it, that's going on
+    //Ok, I technically DO know, what's going on - I simply copied MV.java and slightly changed it, that's going on.
 
     public static boolean MVcommand(CommandSender sender, Player player, String source, String target) {
         

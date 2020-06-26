@@ -97,7 +97,7 @@ public class MV extends CommandAbs {
 
     public static boolean remove(Player player, Path toRm) throws Exception{
         
-        //BIG shoutout to Robert Piasecki for making https://softwarecave.org/2018/03/24/delete-directory-with-contents-in-java/ Without it, I propably couldn't make it (like... I propably could; it's just a simple loop, but I'm far too lazy). I highly recomend checking him out (hey, he's form Poland too, just like me, and he's also a Linux, Java and OpenSource fan - like me, too).
+        //BIG shoutout to Robert Piasecki for making https://softwarecave.org/2018/03/24/delete-directory-with-contents-in-java/ Without it, I propably couldn't make it (like... I propably could; it's just a simple loop, but I'm far too lazy). I highly recomend checking him out (hey, he's form Poland too, just like me (or "accidentially" has one of the most popular names in Poland combined with a very-Polish-sounding-like surname), and he's also a Linux, Java and OpenSource fan - like me, too).
         File file = toRm.toFile();
 
         if (file.isDirectory()) {
