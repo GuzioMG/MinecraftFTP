@@ -17,7 +17,7 @@ Currently, you can:
 
 More about those in [the wiki](https://github.com/GuzioMG/MinecraftFTP/wiki)
 
-## Planned features
+### Planned features
 * Async file download
 
 * An API
