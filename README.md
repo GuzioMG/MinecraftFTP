@@ -19,21 +19,19 @@ More about those in [the wiki](https://github.com/GuzioMG/MinecraftFTP/wiki).
 
 ### Planned features
 * Async file download
-
 * An API
-
-* The aforementioned companion mod (not quite planned, more like "possible" in a faraway future)
-
+* The aforementioned companion mod (not quite "planned", more like "possible in a faraway future")
+* Only rendering user-selected lines when using the `/cat` command (would allow us to show longer files)
+* Line numbering for the `/cat` command (a workaround Minecraft's pesky, un-disable-able line wrap)
 * Modifying files:
-* - Line-by-line
-* - Special treatment of YAML, TOML and JSON files with internal URI-based editing. (ie. altering individual properties)
+  - Line-by-line
+  - Special treatment of YAML, TOML and JSON files with internal URI-based editing. (ie. altering individual properties)
 
 ## License
-**This project is licensed under the GPL version 2.0 license.**
+This project is licensed under the GPL version 2.0 license.
 
 Why not the newest GPL version? Well... I believe in developer's freedom. If one doesn't like how their code is used, they should not allow their code to be used this way. What do I mean by that? Retracting commits. Can this be used to sabotage the project? Absolutely! Is the freedom given to the devs worth the risk? Absolutely, too! But still... the risk of someone purposely sabotaging the project after they choose to leave is there. That's why, as far as I know, the last GPL version that allows such behaviour is GPL 2.0. If I recall correctly, retracting one's own commits without the permission of the project maintainer is not permitted under GPL 3.0, so this project is stuck under 2.0
 
 ## How to get this project?
 Currently - you can't. It's still under development.
-
 _It's obviously possible to self-compile the code_
